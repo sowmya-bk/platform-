@@ -1,0 +1,137 @@
+%link{:href => "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", :rel => "stylesheet"}/
+.head
+%nav.navbar.navbar-expand-lg.bg-light
+  .container-fluid
+    %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-bs-target" => "#navbarSupportedContent", "data-bs-toggle" => "collapse", :type => "button"}
+      %span.navbar-toggler-icon
+    %a.navbar-brand{:href => "#"}
+      = image_tag("logo.png")
+      -# %img{:src => "app/assets/images/logo.png",:alt => "logo"}
+    #navbarSupportedContent.collapse.navbar-collapse.justify-content-center
+      %ul.navbar-nav.mb-2.mb-lg-0.headerr
+        - if user_signed_in?
+          %li.nav-item.hm
+          = link_to raw('<i class="fa fa-home" aria-hidden="true"></i>'),homes_path
+          %li.nav-item.dropdown.mn
+            = link_to "My Network",homes_network_path
+            %a.nav-link.dropdown-toggle{"aria-expanded" => "false", "data-bs-toggle" => "dropdown", :href => "#", :role => "button"}
+            %ul.dropdown-menu
+              %li
+                %a.dropdown-item{:href => "#"} Network Requests
+              %li
+                %a.dropdown-item{:href => "#"} Network Forums
+              %li
+                %a.dropdown-item{:href => "#"} User Conversations
+              %li
+                %a.dropdown-item{:href => "#"} Message Board
+              %li
+                %a.dropdown-item{:href => "#"} My forum events
+          %li.nav-item.dropdown.gv
+            = link_to "Group View",homes_group_path
+            %a.nav-link.dropdown-toggle{"aria-expanded" => "false", "data-bs-toggle" => "dropdown", :href => "#", :role => "button"}
+            %ul.dropdown-menu
+              %li
+                %a.dropdown-item{:href => "#"} My Groups
+              %li
+                %a.dropdown-item{:href => "#"} My Tasks
+              %li
+                %a.dropdown-item{:href => "#"} Group Milestones
+              %li
+                %a.dropdown-item{:href => "#"} My Events
+              %li
+                %a.dropdown-item{:href => "#"} Message Board
+              %li
+                %a.dropdown-item{:href => "#"} Group Requests
+          %li.nav-item.dropdown.bv
+            = link_to "Bubble View",homes_bubble_path
+            %a.nav-link.dropdown-toggle{"aria-expanded" => "false", "data-bs-toggle" => "dropdown", :href => "#", :role => "button"}
+            %ul.dropdown-menu
+              %li
+                %a.dropdown-item{:href => "#"} Collaboration Requests
+              %li
+                %a.dropdown-item{:href => "#"} Conversations
+          %li.nav-item.dropdown.mv
+            = link_to " Map View",homes_map_path
+            %a.nav-link.dropdown-toggle{"aria-expanded" => "false", "data-bs-toggle" => "dropdown", :href => "#", :role => "button"}
+            %ul.dropdown-menu
+              %li
+                %a.dropdown-item{:href => "#"} Collaboration Requests
+              %li
+                %a.dropdown-item{:href => "#"} Conversations
+              %li
+                %a.dropdown-item{:href => "#"} My Stats
+              %li
+                %a.dropdown-item{:href => "#"} Questionnaires
+              %li
+                %a.dropdown-item{:href => "#"}Join Groups
+          %li.nav-item.so
+            = link_to 'Sign Out',destroy_user_session_path ,method: :delete
+        - else
+          %li.nav-item.r
+            = link_to 'Register',new_user_registration_path
+          %li.nav-item.ol
+            = link_to 'Oncology Login',new_user_session_path
+%body
+
+:css
+  .mn{
+     display:flex;
+     padding:8px;
+     align-items: center;
+     justify-content: center;
+  }
+  nav{
+    color:rgba(0,0,0,0.2);
+     
+  }
+  .headerr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .gv{
+     display:flex;
+      padding:8px;
+      align-items: center;
+      justify-content: center;
+  }
+  .bv{
+     display:flex;
+      padding:8px;
+      align-items: center;
+      justify-content: center;
+  }
+  .mv{
+     display:flex;
+      padding:8px;
+      align-items: center;
+      justify-content: center;
+  }
+  .r,.ol,.so,.hm{
+    padding:8px;
+  }
+  .mv a{
+    text-decoration: none;
+  }
+  .bv a{
+    text-decoration: none;
+  }
+  .gv a{
+    text-decoration: none;
+  }
+  .mn a{
+    text-decoration: none;
+  }
+  .ol a{
+    text-decoration: none;
+  }
+  .r a{
+    text-decoration: none;
+  }
+  .so a{
+    text-decoration: none;
+  }
+  
+  
+  

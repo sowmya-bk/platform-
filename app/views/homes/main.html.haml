@@ -1,0 +1,45 @@
+.container-fluid
+    %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-bs-target" => "#navbarSupportedContent", "data-bs-toggle" => "collapse", :type => "button"}
+      %span.navbar-toggler-icon
+    %a.navbar-brand{:href => "#"}
+      %img{:src => "logo.png",:alt => "logo"}
+    #navbarSupportedContent.collapse.navbar-collapse.justify-content-center
+      %ul.navbar-nav.mb-2.mb-lg-0
+        %li.nav-item.hm
+          = link_to 'Home',homes_path
+        %li.nav-item.dropdown.au
+          = link_to "About Us",homes_network_path
+          %a.nav-link.dropdown-toggle{"aria-expanded" => "false", "data-bs-toggle" => "dropdown", :href => "#", :role => "button"}
+          %ul.dropdown-menu
+            %li
+              %a.dropdown-item{:href => "#"} Team
+            %li
+              %a.dropdown-item{:href => "#"} Vision
+           
+        %li.nav-item.dropdown.lm
+          = link_to "Learn More",homes_group_path
+          %a.nav-link.dropdown-toggle{"aria-expanded" => "false", "data-bs-toggle" => "dropdown", :href => "#", :role => "button"}
+          %ul.dropdown-menu
+            %li
+              %a.dropdown-item{:href => "#"} Whitepaper
+            %li
+              %a.dropdown-item{:href => "#"} Articles
+            %li
+              %a.dropdown-item{:href => "#"} Use Case Studies
+            %li
+              %a.dropdown-item{:href => "#"} Blog
+            %li
+              %a.dropdown-item{:href => "#"}Showcase
+            %li
+              %a.dropdown-item{:href => "#"} Announcements
+             %li
+              %a.dropdown-item{:href => "#"} Events
+        %li.nav-item.dropdown.cu
+          = link_to " Contact Us",homes_map_path
+          %a.nav-link.dropdown-toggle{"aria-expanded" => "false", "data-bs-toggle" => "dropdown", :href => "#", :role => "button"}
+          %ul.dropdown-menu
+            %li
+              %a.dropdown-item{:href => "#"} Carrers
+        %li.nav-item.hm
+          = link_to 'Home',homes_path
+            

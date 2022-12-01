@@ -1,0 +1,312 @@
+%link{:href => "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css", :rel => "stylesheet"}/
+%body
+  %div{:class => 'container'}
+    .views
+      .row 
+        .col-md-8.col-sm-6 
+        .col-md-2.col-sm-3.col-xs-6.s1
+          %a{:href => homes_network_path}
+            .mni
+              %strong My Network
+          %a{:href => homes_bubble_path}
+            .bvi
+              %strong Bubble View
+        .col-md-2.col-sm-3.col-xs-6.s2 
+          %a{:href => homes_group_path}
+            .gvi
+              %strong Group View
+          %a{:href => homes_map_path}
+            .mvi
+              %strong Map View
+  %div{:class => 'container-fullwidth w-100 p-0 m-0'}
+    .div1
+      .row 
+        .col-md-3.col-sm-3
+          .mmp 
+            %strong My Profile 
+            .myprof 
+              .row 
+                .col-md-5.col-sm-5 
+                  = image_tag("p1.jfif",style:'border-radius:50%;height:100px;width:100px;text-align:left;')
+                .col-md-7.col-sm-7 
+                  %strong IT Intern 
+                  %br
+                  %strong Cancer Research Institute 
+          %a{:href => "#"}More
+        .col-md-3.col-sm-3
+          .mmg 
+            %strong My Groups
+            .groupimg
+              = image_tag("gl.png",style: 'height:50px; width:50px;')
+              %a{:href => "#"} IT intern 
+              %br
+              = image_tag("gl.png",style: 'height:50px; width:50px;')
+              %a{:href => "#"} Interns
+              %br
+              = image_tag("gl.png",style: 'height:50px; width:50px;')
+              %a{:href => "#"} IT
+              %br
+              = image_tag("gl.png",style: 'height:50px; width:50px;')
+              %a{:href => "#"} VCR
+              %br
+              = image_tag("gl.png",style: 'height:50px; width:50px;')
+              %a{:href => "#"} VCR Park
+          %a{:href => "#"}More
+              
+
+        .col-md-3.col-sm-3
+          .mmn 
+            %strong My Network
+            .mynet 
+              =image_tag('p2.jpg',style:"height:50px;width:50px;border-radius:50%;")
+              .toast.show
+                .toast-head  
+                  %button{"aria-label" => "Close", "data-bs-dismiss" => "toast", type: "button",:class => 'btn-close'}
+                .toast-body
+                  .toast-b 
+                    =image_tag('p2.jpg',style: 'height:30px;width:30px;')
+                    %strong Name 
+                  .toast-b1 
+                    %strong Intern at VCR 
+                    %br
+                    %i.fa.fa-tag
+                    %strong Customer
+                    %hr
+          %a{:href => "#"}More
+            
+        .col-md-3.col-sm-3
+          .mmf 
+            %strong My Forum
+            .list
+              %ul
+                %li VCR intern
+                %li Internship
+                %li Forum
+                %li Research
+          %a{:href => "#"}More
+  %div{:class => 'container-fullwidth w-100 p-0 m-0'}
+    .div2 
+      .row 
+        .col-md-3.col-sm-3
+          %a{:href => homes_bubble_path}
+            .users 
+              %i.fa.fa-users
+              %h4 Users 
+              %p 269
+        .col-md-3.col-sm-3
+          %a{:href => homes_bubble_path}
+            .org 
+              %i.fa.fa-building-o
+              %h4 Organizations 
+              %p 3124
+        .col-md-3.col-sm-3 
+          %a{:href => homes_bubble_path}
+            .groups 
+              %i.fa.fa-object-group
+              %h4 Groups 
+              %p 343
+        .col-md-3.col-sm-3
+          %a{:href => homes_bubble_path}
+            .forums 
+              %i.fa.fa-forumbee
+              %h4 Forums
+              %p 110
+      
+    
+:css
+   @media only screen and (min-width: 992px) {
+    .mni,.gvi,.bvi,.mvi{
+      height:180px;
+      width:auto;
+    }
+  }
+  @media only screen and (max-width: 850px) {
+    .mni,.gvi,.bvi,.mvi{
+      height:180px;
+      width:auto;
+    }
+  }
+  @media only screen and (min-width: 992px) {
+    .mmp,.mmg,.mmn,.mmf{
+      height:200px;
+      width:auto;
+    }
+  }
+  @media only screen and (max-width: 850px) {
+    .mmp,.mmg,.mmn,.mmf{
+      height:200px;
+      width:auto;
+    }
+  }
+  @media only screen and (min-width: 992px) {
+    .users,.org,.groups,.forums{
+      height:90%;
+      width:80%;
+    }
+  }
+   @media only screen and (max-width: 850px) {
+    .users,.org,.groups,.forums{
+      height:90%;
+      width:80%;
+    }
+  }
+  *{
+    box-sizing: border-box;
+  }
+  body{
+     background-image: url('/assets/bg.jpg');
+     
+  }
+  
+  .col{
+    text-align:center;
+  }
+  .toast{
+    visibility:hidden;
+    background:linear-gradient(-45deg, rgb(147, 39, 143), rgb(71, 114, 226));
+    width:70%;
+    border-radius:0%;
+    
+  }
+  .toast-head{
+    text-align:right;
+  }
+  .toast-b{
+    background:white;
+    width:100%;
+    padding:2px;
+
+  }
+  .toast hr{
+    color:white;
+    border:2px solid white;
+    opacity:1;
+  }
+  .toast-b1{
+    padding:6px;
+  }
+  .toast-body{
+    padding:6px;
+    text-align:left;
+  }
+  .mynet:hover .toast{
+    visibility:visible;
+    
+    position:relative;
+    left:20px;
+    
+  }
+  
+  .mmg{
+    width:100%;
+  }
+  .groupimg{
+    overflow-y:auto; 
+    height: calc(100% - 40px);
+    text-align:left;
+  }
+  .list{
+    text-align:left;
+   
+  }
+  .myprof {
+    padding-top:30px;
+    
+  }
+ 
+     
+  .mni,.gvi,.bvi,.mvi{
+    
+    color: white;
+    padding:2px;
+    margin:10px 1px;
+    text-align:center;
+    box-shadow: 2px 2px 1px rgb(255,250,250);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    opacity: 0.7;
+  }
+  .mni,.gvi,.bvi,.mvi {
+    opacity:1;
+  }
+  
+  .mni{
+    background-image: url('/assets/mn.png');
+    
+  }
+  .gvi{
+    background-image: url('/assets/gv.png');
+    
+  }
+  .bvi{
+    background-image: url('/assets/bv.png');
+    
+  }
+  .mvi{
+    background-image: url('/assets/mv.png');
+    
+  }
+  .s1,.s2{
+    display:flex;
+    flex-direction:column;
+  }
+  .row a{
+    text-decoration:none;
+  }
+  .row{
+    margin:2px;
+    text-align:center;
+  }
+  .views{
+    margin-top:20px;
+    margin-bottom:100px;
+    
+  }
+  .div1{
+    background: white;
+    border-radius:2px;
+    margin-left:25px;
+    margin-right:25px;
+    padding:5px 2px;
+    opacity:0.9;
+    
+  }
+  .mmp,.mmg,.mmn,.mmf{
+    border: 1px  solid black;
+    border-radius:3px;
+    padding:3px 2px;
+  }
+  .mmp, .mmg, .mmn, .mmf {
+    text-align:center;
+  }
+  .div2{
+    background:white;
+    padding:5px;
+    padding-top:20px;
+    
+    opacity:0.8;
+    
+    border-radius:5px;
+    margin-left:25px;
+    margin-right:25px;
+    margin-top:15px;
+  }
+  .users,.org,.groups,.forums{
+    color:white;
+    border-radius:15%;
+    background:linear-gradient(-45deg, rgb(147, 39, 143), rgb(71, 114, 226));
+    padding:5px;
+  }
+  .users .fa{
+    font-size:50px;
+  }
+  .org .fa{
+    font-size:50px;
+  }
+  .groups .fa{
+    font-size:50px;
+  }
+  .forums .fa{
+    font-size:50px;
+  }

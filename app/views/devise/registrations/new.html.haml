@@ -1,0 +1,49 @@
+.signup
+  .container
+    %h2 Sign up
+    = form_for(resource, as: resource_name, url: registration_path(resource_name), local: true, data: { turbo: false }) do |f|
+      = render "devise/shared/error_messages", resource: resource
+      .field
+        = f.label :FirstName
+        %br/
+        = f.text_field :firstname, autofocus: true, autocomplete: "email"
+      .field
+        = f.label :LastName
+        %br/
+        = f.text_field :lastname, autofocus: true, autocomplete: "email"
+      .field
+        = f.label :Username
+        %br/
+        = f.text_field :username, autofocus: true, autocomplete: "email"
+      .field
+        = f.label :email
+        %br/
+        = f.email_field :email, autofocus: true, autocomplete: "email"
+      .field
+        = f.label :password
+        - if @minimum_password_length
+          %em
+            (#{@minimum_password_length} characters minimum)
+        %br/
+        = f.password_field :password, autocomplete: "new-password"
+      .field
+        = f.label :password_confirmation
+        %br/
+        = f.password_field :password_confirmation, autocomplete: "new-password"
+      .actions
+        = f.submit "Register"
+    = render "devise/shared/links"
+:css
+  .container{
+    text-align:center;
+    padding:2rem;
+    background:#fff;
+    
+  }
+  .signup{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+    
+  }
